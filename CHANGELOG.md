@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/synvert-datadrivers/terraform-signalfx-dashboard-converter/compare/v1.1.2...v1.1.3) (2025-12-08)
+
+
+### Bug Fixes
+
+* api changed color mappings in 9.18 ([8379f36](https://github.com/synvert-datadrivers/terraform-signalfx-dashboard-converter/commit/8379f36b3b45f6188f2e02bb4ade45f3e4a5e0ac))
+
 ## [1.1.2](https://github.com/synvert-datadrivers/terraform-signalfx-dashboard-converter/compare/v1.1.1...v1.1.2) (2025-12-08)
 
 
