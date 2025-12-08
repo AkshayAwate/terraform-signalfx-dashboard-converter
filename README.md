@@ -3,6 +3,8 @@
 The module uses a JSON export from a SignalFX Dashboard and transforms it into terraform ready parameters.
 This can be used with the [SignalFX Terraform Provider](https://registry.terraform.io/providers/splunk-terraform/signalfx/) or directly with our synvert-datadrivers/terraform-signalfx-dashboard module.
 
+Builds on splunk-terraform/signalfx version >= 9.18.
+
 ## Documentation
 
 The module is documented using the terraform-docs.

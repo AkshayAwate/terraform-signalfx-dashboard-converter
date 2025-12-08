@@ -9,6 +9,7 @@ locals {
   }
   color_map_for_viz_options = {
     # translates palette indices to color names for viz options only
+    # https://github.com/splunk-terraform/terraform-provider-signalfx/blob/main/internal/visual/color_palette.go
     0  = "gray"
     1  = "blue"
     2  = "azure"
@@ -17,17 +18,24 @@ locals {
     5  = "orange"
     6  = "yellow"
     7  = "magenta"
-    8  = "purple"
+    8  = "red"
     9  = "pink"
     10 = "violet"
-    11 = "lilac"
-    12 = "iris"
+    11 = "purple"
+    12 = "lilac"
     13 = "emerald"
-    14 = "green"
-    15 = "aquamarine"
+    14 = "chartreuse"
+    15 = "yellowgreen"
+    16 = "gold"
+    17 = "iris"
+    18 = "green"
+    19 = "jade"
+    20 = "cerise"
+    21 = "aquamarine"
   }
   color_map_for_scales = {
     # translates palette indices to color names for color scale only (e.g. used in single value charts, this is a different palette!)
+    # https://github.com/splunk-terraform/terraform-provider-signalfx/blob/main/internal/visual/color_scale_palette.go
     0  = "gray"
     1  = "blue"
     2  = "azure"

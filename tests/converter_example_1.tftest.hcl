@@ -117,7 +117,7 @@ run "validate_output_time_charts" {
         description               = "Moving average applied as smoothing function."
         disable_sampling          = false
         event_options             = []
-        histogram_options         = null
+        histogram_options         = "gold"
         legend_option_fields      = []
         max_delay                 = null
         minimum_resolution        = 0
@@ -160,7 +160,7 @@ run "validate_output_time_charts" {
         description               = ""
         disable_sampling          = false
         event_options             = []
-        histogram_options         = null
+        histogram_options         = "gold"
         legend_option_fields      = []
         max_delay                 = null
         minimum_resolution        = 0
@@ -176,7 +176,7 @@ run "validate_output_time_charts" {
         viz_options = [
           {
             axis         = "left"
-            color        = "lilac"
+            color        = "purple"
             display_name = "95th percentile of latency"
             label        = "A"
             plot_type    = null
