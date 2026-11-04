@@ -6,7 +6,6 @@ locals {
       program_text = chart["programText"]
       color_by     = chart["options"]["colorBy"]
       color_scales = [
-        # TODO: what is the difference between colorScale and colorScale2 in the exported json?
         for scale in chart["options"]["colorScale2"] : {
           gt    = scale["gt"]
           gte   = scale["gte"]
