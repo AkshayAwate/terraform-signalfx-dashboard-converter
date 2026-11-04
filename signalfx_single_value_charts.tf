@@ -5,7 +5,7 @@ locals {
       description  = chart["description"]
       program_text = chart["programText"]
       color_by     = chart["options"]["colorBy"]
-      color_scales = [
+      color_scales = try([
         for scale in chart["options"]["colorScale2"] : {
           gt    = scale["gt"]
           gte   = scale["gte"]
@@ -13,7 +13,7 @@ locals {
           lte   = scale["lte"]
           color = local.color_map_for_scales[scale["paletteIndex"]]
         }
-      ]
+      ], [])
       viz_options = [
         for option in coalesce(lookup(chart["options"], "publishLabelOptions", []), []) :
         {
