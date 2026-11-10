@@ -31,7 +31,7 @@ locals {
       ]
       max_precision           = chart["options"]["maximumPrecision"]
       secondary_visualization = chart["options"]["secondaryVisualization"]
-      color_scales = [
+      color_scales = try([
         # TODO: what is the difference between colorScale and colorScale2 in the exported json?
         for scale in chart["options"]["colorScale2"] : {
           gt    = scale["gt"]
@@ -40,7 +40,7 @@ locals {
           lte   = scale["lte"]
           color = try(local.color_map_for_scales[scale["paletteIndex"]], null)
         }
-      ]
+      ], [])
       sort_by    = chart["options"]["sortBy"]
       time_range = chart["options"]["time"]["range"]
 
