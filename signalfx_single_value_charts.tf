@@ -3,7 +3,7 @@ locals {
     for chart in local.charts : chart["id"] => {
       name         = chart["name"]
       description  = chart["description"]
-      program_text = chart["programText"]
+      program_text = "${chart["programText"]}.range(-3600)"
       color_by     = chart["options"]["colorBy"]
       color_scales = try([
         for scale in chart["options"]["colorScale2"] : {
