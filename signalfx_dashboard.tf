@@ -38,10 +38,6 @@ locals {
         row    = chart["row"]
         width  = chart["width"]
       }
-      if contains(
-        keys(local.chart_ids_by_reference),
-        chart["chartId"]
-      )
     }
 
     # NOTE: the following parameters are not yet converted
