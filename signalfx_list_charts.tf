@@ -6,7 +6,7 @@ locals {
       description         = chart["description"]
       unit_prefix         = chart["options"]["unitPrefix"]
       color_by            = chart["options"]["colorBy"]
-      max_delay           = chart["options"]["programOptions"]["maxDelay"]
+      max_delay           = try(tonumber(chart["options"]["programOptions"]["maxDelay"])/1000, null)
       timezone            = chart["options"]["programOptions"]["timezone"]
       disable_sampling    = chart["options"]["programOptions"]["disableSampling"]
       refresh_interval    = chart["options"]["refreshInterval"]
